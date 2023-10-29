@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Interface</title>
+</head>
+<body>
+    <h1>{{ query_category.name }}</h1>
+    <form method="get">
+        <input type="text" name="user_query" value="{{ user_query }}" placeholder="Ask a question...">
+        <button type="submit">Ask</button>
+    </form>
+    {% if assistant_response %}
+    <h2>Response:</h2>
+    <p>{{ assistant_response }}</p>
+    {% endif %}
+</body>
+</html>
